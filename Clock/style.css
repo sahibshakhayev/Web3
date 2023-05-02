@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    border-radius: 50%;
+  }
+  
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    margin: -6px;
+    z-index: 1;
+    background: black;
+    border-radius: 50%;
+  }
+  
+  .hour {
+   position:absolute;
+   top:50%;
+   left:50%;
+   width:65px; 
+   height:6px;
+   z-index: -3;
+   background:black;
+  
+   
+   border-top-right-radius:3px; 
+   border-bottom-right-radius:3px; 
+  
+   
+   transform-origin:left; 
+  
+
+   animation-name:hour-animation; 
+   animation-duration:43200s; 
+   animation-iteration-count: infinite; 
+   animation-fill-mode: forwards;
+  }
+  
+  .min {
+   position:absolute;
+   top:50%;
+   left:50%;
+   width:95px; 
+   height:4px;
+  z-index: -2;
+   
+  
+   background:black;
+  
+   
+   border-top-right-radius:2px; 
+   border-bottom-right-radius:2px; 
+  
+  
+   transform-origin:left; 
+   animation-name:min-animation; 
+   animation-duration:3600s; 
+   animation-iteration-count: infinite; 
+   animation-fill-mode: forwards;
+  }
+  
+  .sec {
+   position:absolute;
+   top:50%;
+   left:50%;
+   width:120px; 
+   height:2px;
+  z-index: -1;
+   
+   
+  
+   background:red;
+  
+   border-top-right-radius:1px; 
+   border-bottom-right-radius:1px; 
+   transform-origin:left; 
+   animation-name:sec-animation; 
+   animation-duration:60s;
+   animation-iteration-count: infinite;  
+   animation-fill-mode: forwards;
+  }
+  
+  
+  @keyframes hour-animation {
+   from {transform: rotate(0deg);} 
+   to {transform: rotate(360deg);} 
+  }
+  
+  
+  @keyframes min-animation {
+   from {transform:  rotate(0deg);} 
+   to {transform: rotate(360deg);} 
+  }
+  
+
+  @keyframes sec-animation {
+   from {transform:  rotate(0deg);} 
+   to {transform: rotate(360deg);} 
+  }
